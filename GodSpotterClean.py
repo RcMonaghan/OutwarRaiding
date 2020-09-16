@@ -6,7 +6,7 @@ from discord import Webhook, RequestsWebhookAdapter
 from datetime import datetime
 
 
-webhook = Webhook.from_url("https://discordapp.com/api/webhooks/730453800527069246/Q31aGhUfXY2R8xuWXcNhX9iiNUI0s6ybeFq6DseYlntIYv_bm_5jKMAQukkjN-SqI27d", adapter=RequestsWebhookAdapter())
+webhook = Webhook.from_url("", adapter=RequestsWebhookAdapter())
 
 # Fill in your details here to be posted to the login form.
 payload = {
