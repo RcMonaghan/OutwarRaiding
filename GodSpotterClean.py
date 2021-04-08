@@ -24,7 +24,7 @@ def GodWatch():
 			current_time = now.strftime("%H:%M:%S")
 			print(current_time)
 			
-			me = s.get('https://sigil.outwar.com/world?suid=1034264&serverid=1')
+			me = s.get('https://sigil.outwar.com/world?suid=******&serverid=1')
 			vault = s.get('https://sigil.outwar.com/raidtools')
 			soup = BeautifulSoup(vault.content, 'html.parser')
 			for a in soup.find_all("a", text=re.compile('Teleport to ')):
