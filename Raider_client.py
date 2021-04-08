@@ -7,12 +7,12 @@ import time
 import tkinter as tk
 
 Group1 = [
-"https://sigil.outwar.com/world?suid=121995&serverid=1",
-"https://sigil.outwar.com/world?suid=149484&serverid=1"
+"https://sigil.outwar.com/world?suid=******&serverid=1",
+"https://sigil.outwar.com/world?suid=*******&serverid=1"
 ]
 
 def Refresh():
-	s.post("https://sigil.outwar.com/world?suid=121995&serverid=1")
+	s.post("https://sigil.outwar.com/world?suid=******&serverid=1")
 	captcha = s.get('https://sigil.outwar.com/phpcatcha/phpcatcha_show.php')
 	image_bytes = io.BytesIO(captcha.content)
 	global img
@@ -26,7 +26,7 @@ def Refresh():
 def GetAccount():
 	global s
 	with requests.Session() as s:
-		p = s.post('https://sigil.outwar.com/world.php?rg_sess_id=rnsh121yywsxffbvc13772sv9w5b171k&suid=122176&serverid=1')
+		p = s.post('https://sigil.outwar.com/world.php?rg_sess_id=*****************&suid=******&serverid=1')
 		s.post("https://sigil.outwar.com/world?suid=121995&serverid=1")
 		captcha = s.get('https://sigil.outwar.com/phpcatcha/phpcatcha_show.php')
 		image_bytes = io.BytesIO(captcha.content)
