@@ -16,14 +16,14 @@ JoinPayload = {
 
 def RaidFormer():
 	with requests.Session() as s:
-		p = s.post('https://sigil.outwar.com/world.php?rg_sess_id=x00jhmyqhcyqswxq4fsnyybuymwyshhj&suid=147052&serverid=1')
+		p = s.post('https://sigil.outwar.com/world.php?rg_sess_id=****************&suid=******&serverid=1')
 		me = s.get('https://sigil.outwar.com/world?suid=147052&serverid=1')
 		s.post('https://sigil.outwar.com/formraid.php?target=127', data=JoinPayload)
 		
 
 def BossRaider():
 	with requests.Session() as s:
-		p = s.post('https://sigil.outwar.com/world.php?rg_sess_id=x00jhmyqhcyqswxq4fsnyybuymwyshhj&suid=121630&serverid=1')
+		p = s.post('https://sigil.outwar.com/world.php?rg_sess_id=******************&suid=******&serverid=1')
 		soup = BeautifulSoup(p.content, 'html.parser')
 		me = s.get('http://sigil.outwar.com/myaccount')
 		soup = BeautifulSoup(me.content, 'html.parser')
@@ -52,8 +52,8 @@ def BossRaider():
 
 def RaidLaunch():
 	with requests.Session() as s:
-		p = s.post('https://sigil.outwar.com/world.php?rg_sess_id=x00jhmyqhcyqswxq4fsnyybuymwyshhj&suid=147052&serverid=1')
-		me = s.get('https://sigil.outwar.com/world?suid=147052&serverid=1')
+		p = s.post('https://sigil.outwar.com/world.php?rg_sess_id=*******************&suid=******&serverid=1')
+		me = s.get('https://sigil.outwar.com/world?suid=******&serverid=1')
 		print(RaidJoin)
 		JoinLink = ('https://sigil.outwar.com/joinraid.php?raidid='+RaidID)
 		print(JoinLink)
